@@ -1,0 +1,47 @@
+﻿@model List<Departamento>
+<div class="container-fluid text-center " >
+<h1 style="color:blue">
+        Listado departamentos
+</h1>
+
+    <table class="table table-warning table-hover">
+
+        <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>NOMBRE</th>
+                <th>LOCALIDAD</th>
+                <th>Detalles</th>
+                <th>Eliminar</th>
+                <th>Editar</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Departamento dept in Model)
+            {
+                <tr>
+                    <td>@dept.IdDepartamento</td>
+                    <td>@dept.Nombre</td>
+                    <td>@dept.Localidad</td>
+                    <td>
+                        @Html.ActionLink("Details", "Details", "Departamento"
+                        , new {iddepartamento = dept.IdDepartamento}
+                        , new {@class = "btn btn-warning"})
+                    </td>
+                    <td>
+                        @Html.ActionLink("Delete", "Delete", "Departamento"
+                        , new {iddepartamento = dept.IdDepartamento}
+                        , new {@class = "btn btn-danger"})
+                    </td>
+                    <td>
+                        @Html.ActionLink("Update", "Update", "Departamento"
+                        , new {iddepartamento = dept.IdDepartamento}
+                        , new {@class = "btn btn-info"})
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+

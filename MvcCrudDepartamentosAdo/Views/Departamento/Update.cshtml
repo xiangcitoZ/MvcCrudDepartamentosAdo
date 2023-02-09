@@ -1,0 +1,35 @@
+﻿
+ @model Departamento
+
+
+ <div class="container-fluid  " style="margin: 10px 0px" >
+
+    <hr/>
+<h1>Edit departamento</h1>
+
+<a class="btn btn-warning" style="margin: 10px 0px" asp-controller="Departamento"
+    asp-action="Index">
+    Volver a Index
+</a>
+
+<form method="post">
+
+    <input type="hidden" name="iddepartamento"
+       value="@Model.IdDepartamento"/>
+
+    <label>Nombre:</label>
+    <input type="text" name="nombre"
+        value="@Model.Nombre"/>
+
+    <label>Localidad:</label>
+    <input type="text" name="localidad"
+        value="@Model.Localidad"/>
+    
+    <button class="btn btn-info">
+        Update
+    </button>
+
+
+</form>
+
+</div>

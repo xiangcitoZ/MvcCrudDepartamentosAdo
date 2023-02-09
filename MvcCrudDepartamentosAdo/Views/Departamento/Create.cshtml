@@ -1,0 +1,29 @@
+﻿
+
+<h1>Nuevo departamento</h1>
+<div class="container-fluid  " style="margin: 10px 0px" >
+
+    <hr/>
+<form method="post">
+
+    <label>Id departamento:</label>
+    <input type="text" name="iddepartamento"
+        class="form-control" required/>
+
+    <label>Nombre:</label>
+    <input type="text" name="nombre"
+        class="form-control" required/>
+
+    <label>Localidad:</label>
+    <input type="text" name="localidad"
+        class="form-control" required/>
+    
+    <button class="btn btn-info">
+        Create
+    </button>
+
+
+</form>
+
+<h2 style="color:lightgray"> @ViewData["MENSAJE"]</h2>
+</div>

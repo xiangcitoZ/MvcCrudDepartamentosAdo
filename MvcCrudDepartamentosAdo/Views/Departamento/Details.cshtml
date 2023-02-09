@@ -1,0 +1,23 @@
+﻿
+@model Departamento
+<div class="container-fluid  " style="margin: 10px 0px" >
+
+    <hr/>
+<a class="btn btn-warning" style="margin: 10px 0px" asp-controller="Departamento"
+    asp-action="Index">
+    Volver a Index
+</a>
+
+
+<ul class="list-group">
+    <li class="list-group-item">
+        Id departamento: @Model.IdDepartamento
+    </li>
+     <li class="list-group-item">
+        Nombre: @Model.Nombre
+    </li>
+     <li class="list-group-item">
+        Localidad: @Model.Localidad
+    </li>
+</ul>
+</div>
